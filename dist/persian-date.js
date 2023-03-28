@@ -1311,11 +1311,11 @@ var PersianDateClass = function () {
                         }
                     case 'h':
                         {
-                            return checkPersian(info.hour % 12);
+                            return checkPersian((info.hour % 12) || 12);
                         }
                     case 'hh':
                         {
-                            return checkPersian(leftZeroFill(info.hour % 12, 2));
+                            return checkPersian(leftZeroFill((info.hour % 12) || 12, 2));
                         }
                     // Minutes
                     case 'm':
